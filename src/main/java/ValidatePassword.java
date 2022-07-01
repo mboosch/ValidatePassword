@@ -1,7 +1,7 @@
 public class ValidatePassword {
 
     public static void main(String[] args) {
-        String password = "quetz5";
+        String password = "quetz";
         System.out.println(testPasswordLength(password));
         System.out.println(testPasswordForNumbers(password));
     }
@@ -18,10 +18,10 @@ public class ValidatePassword {
         char[] passwordArray = password.toCharArray();
         for (int numbers = 0; numbers < password.length(); ++numbers) {
             if (Character.isDigit(passwordArray[numbers])) {
-                System.out.println("Your password contains numbers.");
-                return false;
+                return true;
             }
         }
-        return true;
+        System.out.println("Your password contains no numbers.");
+        return false;
     }
 }

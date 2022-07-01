@@ -18,7 +18,7 @@ class ValidatePasswordTest {
     @Test
     void testPasswordforNumnbers() {
         // given
-        String testString = "quetzalcoatl55";
+        String testString = "quetzalcoatl";
 
         // when
         boolean actual = ValidatePassword.testPasswordForNumbers(testString);
