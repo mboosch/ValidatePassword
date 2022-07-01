@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class ValidatePassword {
 
     public static void main(String[] args) {
@@ -23,5 +25,13 @@ public class ValidatePassword {
         }
         System.out.println("Your password contains no numbers.");
         return false;
+    }
+
+    public static boolean badPassword(String password) {
+        if (Objects.equals(password, "abcdefgh")) {
+            System.out.println("That`s definitely not a good password.");
+            return false;
+        }
+        return true;
     }
 }

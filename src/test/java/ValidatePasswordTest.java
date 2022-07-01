@@ -26,4 +26,16 @@ class ValidatePasswordTest {
         // then
         Assertions.assertEquals(false, actual);
     }
+
+    @Test
+    void testBadPassword() {
+        // given
+        String testString = "abcdefgh";
+
+        // when
+        boolean actual = ValidatePassword.badPassword(testString);
+
+        // then
+        Assertions.assertEquals(false, actual);
+    }
 }
